@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        /*头部*/
+        header{
+            display:block;/*将行级元素转换为块级元素*/
+            width:100%;
+            height:100px;
+            background-color: red;
+        }
+        /*导航*/
+        nav{
+            width:100%;
+            height:36px;
+            background-color: green;
+        }
+        /*主体*/
+        main{
+            width:100%;
+            height:500px;
+            background-color: white;
+        }
+        /*主体-左边*/
+        main > article{
+            width:80%;
+            height:100%;
+            background-color: rgb(68, 68, 68);
+            float: left;
+        }
+        /*主体-右边*/
+        main > aside{
+            width:20%;
+            height:100%;
+            background-color: pink;
+            float: right;
+        }
+        /*底部*/
+        footer{
+            width:100%;
+            height:80px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header></header>
+
+    <!-- 导航栏 -->
+    <nav></nav>
+
+    <!-- 主体 -->
+    <main>
+        <!-- 左边 -->
+        <article>
+            <button id="btn">我是一个按钮</button>
+            <script type="text/javascript">
+                /*
+                * 浏览器已经为我们提供文档节点对象，这个对象是window属性
+                *   可以在页面中直接使用，文档节点代表的是整个网页
+                */
+                //console.log(document);
+
+                //获取到button对象
+                var btn = document.getElementById("btn");
+
+                //修改按钮的文字
+                btn.innerHTML = "I'm Button";
+            </script>
+        </article>
+
+        <!-- 右边 -->
+        <aside></aside>
+    </main>
+
+    <!-- 底部 -->
+    <footer></footer>
+</body>
+</html>
